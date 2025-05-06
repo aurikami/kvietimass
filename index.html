@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My HTML Test</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background-color: #fff;
+    }
+
+    .page-border {
+      border: 5px solid #FF6B6B;
+      border-radius: 15px;
+      padding: 20px;
+      margin: 40px;
+      background-color: #FFF0F0;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    h1, h2 {
+      text-align: center;
+    }
+
+    .variant-title {
+      margin-left: 40px;
+      color: #ee8878;
+      text-align: left;
+    }
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+      gap: 40px;
+      margin: 30px 0;
+    }
+
+    .left, .right {
+      flex: 1;
+      padding: 10px;
+    }
+
+    .left {
+      color: #eea578;
+      text-align: left;
+    }
+
+    .right {
+      color: #d15d45;
+      text-align: right;
+    }
+
+    .images {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .images img {
+      height: 300px;
+      object-fit: cover;
+      border-radius: 10px;
+      width: 100%;
+      max-width: 300px;
+    }
+
+    .final-image {
+      width: 100%;
+      max-width: 700px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    button {
+      background-color: #FF69B4;
+      height: 50px;
+      font-size: 24px;
+      font-family: 'Dancing Script', cursive;
+      font-style: italic;
+      padding: 10px 20px;
+      border: 3px solid #FF69B4;
+      border-radius: 17px;
+      color: white;
+      cursor: pointer;
+      display: block;
+      margin: 20px auto;
+    }
+
+    #myImage {
+      display: none;
+      max-width: 100%;
+      margin-top: 20px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Responsive for phones */
+    @media (max-width: 768px) {
+      .variant-title {
+        margin-left: 0;
+        text-align: center;
+      }
+
+      .row {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .left, .right {
+        text-align: center;
+      }
+
+      .images {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .images img {
+        max-width: 90%;
+        height: auto;
+        object-fit: contain;
+        margin-bottom: 20px;
+      }
+
+      .images img:nth-child(1),
+      .images img:nth-child(2),
+      .images img:nth-child(3) {
+        max-width: 80%;
+      }
+
+      .images img:nth-child(3) {
+        margin-left: -20px;
+      }
+
+      .images img:nth-child(4) {
+        margin-left: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-border">
+    <br>
+    <h1 style="color:green;">Labas, kaip tu šiandien jautiesi?!</h1>
+    <br>
+    <h2 style="color:pink;">Galbūt norėtum laiką praleisti šiek tiek kitaip ..., nei klausytis mano nesąmonių</h2>
+    <br>
+    <h2 class="variant-title">Variantai:</h2>
+    <br><br>
+
+    <div class="row">
+      <div class="left">
+        <h2>Pirmiausia, galėtume atsikratyti šėtono žetono pagalba, <br> ir taip prisiminti Elvio dainas ir šukuoseną</h2>
+      </div>
+      <div class="right">
+        <h2>Taip pat galėtume pažaisti boulingą arba billiardą,<br> ir atsigerti sulčių</h2>
+      </div>
+    </div>
+
+    <div class="images">
+      <img src="https://i.ebayimg.com/images/g/lwwAAOSwXI5a3VFT/s-l1200.jpg">
+      <img src="https://static.nuolaidoskodas.net/uploads/v2/lt/other/cropped/1619530776/kazino-losimo-automatai.jpg">
+      <img src="https://as1.ftcdn.net/v2/jpg/04/40/02/24/500_F_440022460_IO7hLFNSmM06uzjc3RYRffvV6DJ0WMUf.jpg">
+    </div>
+
+    <br><br>
+
+    <h2 style="color:#83b219;">Ir galiausiai eiti pasivaikčioti šalia Karoliniškių draustinio (miškelio):</h2>
+    <img class="final-image" src="https://media.cntraveller.com/photos/611bf0b8f6bd8f17556db5e4/4:3/w_2664,h_1998,c_limit/gettyimages-1146431497.jpg">
+
+    <br><br>
+    <h2 style="color:#FFC0CB;">Jei sutinki, paspausk mygtuką : Taip <br>
+      Nebūtina visų dalykų daryti, galim vieną ar kelis pasirinkti?</h2>
+
+    <button onclick="document.getElementById('myImage').style.display='block'">
+      Taip, jaučiuosi gerai!
+    </button>
+
+    <img id="myImage" src="https://upload.wikimedia.org/wikipedia/commons/b/bd/Tierpark_OrangJolie_Hellabr.gif">
+  </div>
+</body>
+</html>
